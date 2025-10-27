@@ -1,9 +1,44 @@
 body {
     background-color: rgb(222, 204, 178);
+    font-family: a;
+    margin:0px
 }
 
-/* Solid border */
-grid-container {
-    display: grid;
-    grid-template-rows: 100px 100px 100px;
+.section {
+    height:300px;
 }
+
+#div1{
+    border-bottom: 0.5px solid grey;
+
+   
+}
+#div2{
+    padding-left: 30%;
+    border-bottom: 0.5px solid grey;
+    padding-bottom: 2%;
+   
+}
+#div3{
+    border-bottom: 0.5px solid grey;
+}
+
+#h1{
+    padding-top: 40px;
+    font-size: 45px;
+}
+
+#profile{
+
+}
+
+h2{
+    font-size:medium;
+    font-size: 20px;
+    font-weight: 100px;
+}
+p{
+    font-size: 20px;
+}
+
+
