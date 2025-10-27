@@ -1,0 +1,9 @@
+body {
+    background-color: rgb(222, 204, 178);
+}
+
+/* Solid border */
+grid-container {
+    display: grid;
+    grid-template-rows: 100px 100px 100px;
+}
