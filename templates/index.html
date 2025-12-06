@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>Chidera Idabor</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    </head>
+    <body>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="flash {{ category }}">{{ message }}</div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        <div id ="div1" class="section" style="text-align: center;">
+            <h1 id="h1">Chidera L. Idabor</h1>
+            <h2>Artificial Intelligence Student</h2>
+
+            <p>
+                An Artificial Intelligence graduate student<br>
+                at Kent State University with a passion for building <br>
+                intelligent systems and leading projects that drive real-world impact.
+            </p>
+
+
+        </div>
+        <div class="about-container">
+            <div id="profile">
+                <img src="{{ url_for('static', filename='images/profile_pic.png') }}" alt="Profile Picture">
+            </div>
+
+            <div id="div2" class="section" >
+                <h1>About Me</h1>
+                <p>I'm Chidera Idabor, an Artificial Intelligence graduate student at<br>
+                    Kent State University with a background in software engineering.<br>
+                    I've built embedded systems at TechnipFMC and fine-tuned generative AI models at Babcock & Wilcox, developing solutions that merge creativity with technical precision.<br>
+                    My focus is on designing intelligent systems, optimizing workflows, and delivering results that bring innovation to life. <br>
+                </p> 
+                <div class="download_resume" style="text-align: center;">
+                    <a href="{{ url_for('static', filename='files/chidera_idabor_resume.pdf') }}" download>Download Resume</a>
+                </div>
+            </div>
+
+
+        </div>
+       
+        <div id="div3" class="section">
+            <h1>Projects</h1>
+            <div class="projects_container">
+        
+                <div class="project_card">
+                    <h4>Recommendation System</h4>
+                    <p>A data-driven cross-selling recommendation engine using item-based collaborative filtering and cosine similarity to generate real-time Top-N complementary product suggestions.</p>
+                    <a href="https://github.com/chideraidabor/recommendation_system" target="_blank">View Code</a>
+                </div>
+
+                <div class="project_card">
+                    <h4>CT StreamDB</h4>
+                    <p>A streamlined television-series information system built to offer fast, organized access to series metadata, ratings, and per-season analytics.</p>
+                    <a href="https://github.com/chideraidabor/CT_StreamDB" target="_blank">View Code</a>
+                </div>
+        
+                <div class="project_card">
+                    <h4>Melanoma Detection using U-Net</h4>
+                    <p>Deep learning model that segments and detects melanoma in medical images.</p>
+                    <a href="https://github.com/chideraidabor/Melanoma-Detection-UNet-DeepLearning" target="_blank">View Code</a>
+                </div>
+        
+                <div class="project_card">
+                    <h4>Melanoma Detection using ABC Algorithm</h4>
+                    <p>Segmentation method based on the Artificial Bee Colony optimization algorithm.</p>
+                    <a href="https://github.com/chideraidabor/Melanoma-Detection-Segmentation-Image-Processing-Techniques" target="_blank">View Code</a>
+                </div>
+        
+                <div class="project_card">
+                    <h4>Linear Regression</h4>
+                    <p>Predictive model that fits a line to estimate relationships between variables.</p>
+                    <a href="https://github.com/chideraidabor/Linear-Regression" target="_blank">View Code</a>
+                </div>
+        
+                <div class="project_card">
+                    <h4>K-Means Clustering</h4>
+                    <p>Algorithm that groups similar data points into clusters for pattern recognition.</p>
+                    <a href="https://github.com/chideraidabor/Kmeans" target="_blank">View Code</a>
+                </div>
+        
+                <div class="project_card">
+                    <h4>Hidden Markov Model</h4>
+                    <p>Model that predicts hidden states based on observed events for sequence analysis.</p>
+                    <a href="https://github.com/chideraidabor/HiddenMarkovModel/tree/develop" target="_blank">View Code</a>
+                </div>
+        
+            </div>
+        </div>
+
+        <div id = "contact" class="section">
+            <h1 style="text-align: center;">Contact</h1>
+            <form class="contact_form" action="/send_email" method="POST">
+                <input type="text" name="name" placeholder="Name" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <textarea name="message" placeholder="Message" rows="6" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+
+        </div>
+        <!-- Flash fade-out script -->
+        <script src="{{ url_for('static', filename='js/script.js') }}"></script>       
+    </body>
+</html>
